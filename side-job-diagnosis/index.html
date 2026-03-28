@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完全初心者ママ向け 副業診断</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <header>
+            <h1>完全初心者向け<br>副業タイプ診断</h1>
+            <p>1つに絞れる！あなたに合う稼ぎ方を見つけよう</p>
+        </header>
+
+        <main>
+            <!-- Start Screen -->
+            <section id="start-screen" class="screen active">
+                <div class="glass-card start-card">
+                    <div class="icon-wrapper">🎯</div>
+                    <h2>副業迷子はもう卒業！<br>あなたに最適な<br>副業を「1つに絞る」診断</h2>
+                    <p>「自分に合う副業がわからない…」<br>たった6つの質問に直感で答えるだけで、今の状況・性格にピタッとハマる副業と「今日やるべき最初の一歩」をお伝えします！</p>
+                    <button id="start-btn" class="primary-btn">診断をスタートする</button>
+                </div>
+            </section>
+
+            <!-- Question Screen -->
+            <section id="question-screen" class="screen">
+                <div class="question-header">
+                    <button id="back-btn" class="back-btn" style="display: none;">← 前の質問に戻る</button>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="glass-card question-card">
+                    <p id="question-counter" class="question-counter">Q 1/6</p>
+                    <h2 id="question-text" class="question-text">質問テキスト</h2>
+                    <div id="options-container" class="options-container">
+                        <!-- Options injected by JS -->
+                    </div>
+                    <button id="next-btn" class="primary-btn next-btn" disabled>次へ進む</button>
+                </div>
+            </section>
+
+            <!-- Result Screen -->
+            <section id="result-screen" class="screen">
+                <div class="glass-card result-card">
+                    <p class="result-label">あなたは</p>
+                    <div class="result-header">
+                        <h2 id="result-title" class="result-title">👉【〇〇タイプ】です！</h2>
+                    </div>
+                    
+                    <div class="result-content">
+                        <div class="result-section">
+                            <h3>✔ 向いてる副業</h3>
+                            <ul id="job-list"></ul>
+                        </div>
+                        <div class="result-section">
+                            <h3>✔ 理由</h3>
+                            <p id="result-reason"></p>
+                        </div>
+                        <div class="result-section">
+                            <h3>✔ 最初の一歩</h3>
+                            <p id="result-firststep" class="highlight-text"></p>
+                        </div>
+                        <div class="result-section">
+                            <h3>✔ 3日後の変化</h3>
+                            <p id="result-change"></p>
+                        </div>
+                        <div class="result-section warning-section">
+                            <h3>✔ NG行動</h3>
+                            <p id="result-ng"></p>
+                        </div>
+                    </div>
+
+                    <div class="monetization-links">
+                        <a href="https://line.me/ti/g2/70Zv08E9HwkdH5tfohJ_P4meU2g6K7D-Jaq67Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="action-btn link-openchat">
+                            <span class="btn-icon">💬</span> ０→１達成したいママの副業部
+                        </a>
+                        <a href="https://lin.ee/Sv9KVHL" target="_blank" class="action-btn link-line">
+                            <span class="btn-icon">📲</span> 【無料】個別相談（公式LINE）
+                        </a>
+                    </div>
+
+                    <button id="restart-btn" class="secondary-btn">もう一度診断する</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 Side Job Diagnosis Tool</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
